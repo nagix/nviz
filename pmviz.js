@@ -10,9 +10,9 @@ window.onload = () => {
 	container.id = 'container';
 	document.body.appendChild(container);
 
-	if (window.pm && window.pm.getData) {
-		window.pm.getData((err, value) => {
-			container.innerText = JSON.stringify(value.data);
+	if (window.pm && window.pm.getResponse) {
+		window.pm.getResponse((err, response) => {
+			container.innerText = response.body;
 		});
 	}
 };
